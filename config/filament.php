@@ -2,6 +2,25 @@
 
 return [
 
+    'auth' => [
+        'guard' => 'web',
+        'passwords' => 'users',
+    ],
+
+    'default_panel' => 'default',
+
+    'panels' => [
+        'default' => [
+            'path' => 'admin',
+            'namespace' => 'App\\Filament\\Resources',
+            'resources' => [
+                'App\\Filament\\Resources\\CategoryResource',
+                'App\\Filament\\Resources\\ExpenseResource',
+                'App\\Filament\\Resources\\IncomeResource',
+            ],
+        ],
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Broadcasting
